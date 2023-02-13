@@ -22,18 +22,19 @@ namespace ItemApp
                 WeaponDetailAdd.PackWeaponDetailFromExcel
                 ("D:\\FantasyOfSango\\Develop\\Item\\SQL\\Server\\ItemExcel\\WeaponTestExcel.xlsx");
             WeaponDetailModifyState state = WeaponDetailAdd.AddWeaponDetail(weaponDetails);
-            Console.WriteLine("修改武器数量");
-            Console.WriteLine(state.ModifyWeaponDetailNum);
+            Console.WriteLine("修改武器数量\n");
+            Console.WriteLine(state.ModifyWeaponDetailNum + "\n");
             Console.WriteLine("已加入武器名称");
             foreach (var item in state.AddWeaponDetailName)
             {
                 Console.Write(item + ", ");
             }
-            Console.WriteLine("冲突武器名称");
+            Console.WriteLine("\n");
+            Console.WriteLine("冲突武器名称\n");
             foreach (var item in state.HasWeaponDetailName)
             {
                 Console.Write(item + ", ");
-            }            
+            }  
             Console.ReadKey();
         }
     }
